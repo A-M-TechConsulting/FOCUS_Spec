@@ -1,0 +1,173 @@
+{
+  "NumericFormat-A-000-M": {
+    "Function": "Composite",
+    "Reference": "NumericFormat",
+    "EntityType": "Attribute",
+    "Notes": "",
+    "CRVersionIntroduced": "1.2",
+    "Status": "Active",
+    "ApplicabilityCriteria": [],
+    "Type": "Static",
+    "ValidationCriteria": {
+      "MustSatisfy": "",
+      "Keyword": "MUST",
+      "Requirement": {
+        "CheckFunction": "AND",
+        "Items": [
+          {
+            "CheckFunction": "CheckConformanceRule",
+            "ConformanceRuleId": "NumericFormat-A-001-M"
+          },
+          {
+            "CheckFunction": "CheckConformanceRule",
+            "ConformanceRuleId": "NumericFormat-A-002-M"
+          },
+          {
+            "CheckFunction": "CheckConformanceRule",
+            "ConformanceRuleId": "NumericFormat-A-003-M"
+          },
+          {
+            "CheckFunction": "CheckConformanceRule",
+            "ConformanceRuleId": "NumericFormat-A-004-M"
+          },
+          {
+            "CheckFunction": "CheckConformanceRule",
+            "ConformanceRuleId": "NumericFormat-A-005-M"
+          },
+          {
+            "CheckFunction": "CheckConformanceRule",
+            "ConformanceRuleId": "NumericFormat-A-006-M"
+          },
+          {
+            "CheckFunction": "CheckConformanceRule",
+            "ConformanceRuleId": "NumericFormat-A-007-M"
+          }
+        ]
+      },
+      "Condition": {},
+      "Dependencies": []
+    }
+  },
+  "NumericFormat-A-001-M": {
+    "Function": "Validation",
+    "Reference": "NumericFormat",
+    "EntityType": "Attribute",
+    "Notes": "",
+    "CRVersionIntroduced": "1.2",
+    "Status": "Active",
+    "ApplicabilityCriteria": [],
+    "Type": "Static",
+    "ValidationCriteria": {
+      "MustSatisfy": "Columns with a Numeric value format MUST contain a single numeric value",
+      "Keyword": "MUST",
+      "Requirement": {
+        "CheckFunction": "FormatNumeric",
+        "ColumnName": "NumericColumn"
+      },
+      "Condition": {},
+      "Dependencies": []
+    }
+  },
+  "NumericFormat-A-002-M": {
+    "Function": "Validation",
+    "Reference": "NumericFormat",
+    "EntityType": "Attribute",
+    "Notes": "Fractional notation MUST NOT be used",
+    "CRVersionIntroduced": "1.2",
+    "Status": "Active",
+    "ApplicabilityCriteria": [],
+    "Type": "Dynamic",
+    "ValidationCriteria": {
+      "MustSatisfy": "Numeric values MUST be expressed as an integer value, a decimal value, or a value expressed in scientific notation",
+      "Keyword": "MUST",
+      "Requirement": {},
+      "Condition": {},
+      "Dependencies": []
+    }
+  },
+  "NumericFormat-A-003-M": {
+    "Function": "Validation",
+    "Reference": "NumericFormat",
+    "EntityType": "Attribute",
+    "Notes": "",
+    "CRVersionIntroduced": "1.2",
+    "Status": "Active",
+    "ApplicabilityCriteria": [],
+    "Type": "Dynamic",
+    "ValidationCriteria": {
+      "MustSatisfy": "Numeric values MUST NOT be expressed with mathematical symbols, functions, or operators",
+      "Keyword": "MUST",
+      "Requirement": {},
+      "Condition": {},
+      "Dependencies": []
+    }
+  },
+  "NumericFormat-A-004-M": {
+    "Function": "Validation",
+    "Reference": "NumericFormat",
+    "EntityType": "Attribute",
+    "Notes": "Currency symbols, units of measure, etc.",
+    "CRVersionIntroduced": "1.2",
+    "Status": "Active",
+    "ApplicabilityCriteria": [],
+    "Type": "Dynamic",
+    "ValidationCriteria": {
+      "MustSatisfy": "Numeric values MUST NOT contain qualifiers or additional characters",
+      "Keyword": "MUST",
+      "Requirement": {},
+      "Condition": {},
+      "Dependencies": []
+    }
+  },
+  "NumericFormat-A-005-M": {
+    "Function": "Validation",
+    "Reference": "NumericFormat",
+    "EntityType": "Attribute",
+    "Notes": "Except for a single decimal point if required",
+    "CRVersionIntroduced": "1.2",
+    "Status": "Active",
+    "ApplicabilityCriteria": [],
+    "Type": "Dynamic",
+    "ValidationCriteria": {
+      "MustSatisfy": "Numeric values MUST NOT contain commas or punctuation marks except for a single decimal point",
+      "Keyword": "MUST",
+      "Requirement": {},
+      "Condition": {},
+      "Dependencies": []
+    }
+  },
+  "NumericFormat-A-006-M": {
+    "Function": "Validation",
+    "Reference": "NumericFormat",
+    "EntityType": "Attribute",
+    "Notes": "A negative sign (-) MUST indicate a negative value",
+    "CRVersionIntroduced": "1.2",
+    "Status": "Active",
+    "ApplicabilityCriteria": [],
+    "Type": "Dynamic",
+    "ValidationCriteria": {
+      "MustSatisfy": "Numeric values MUST NOT include a character to represent a sign for a positive value",
+      "Keyword": "MUST",
+      "Requirement": {},
+      "Condition": {},
+      "Dependencies": []
+    }
+  },
+  "NumericFormat-A-007-M": {
+    "Function": "Validation",
+    "Reference": "NumericFormat",
+    "EntityType": "Attribute",
+    "Notes": "",
+    "CRVersionIntroduced": "1.2",
+    "Status": "Active",
+    "ApplicabilityCriteria": [],
+    "Type": "Dynamic",
+    "ValidationCriteria": {
+      "MustSatisfy": "Columns with a Numeric value format MUST present Integer or Decimal as the Data type",
+      "Keyword": "MUST",
+      "Requirement": {},
+      "Condition": {},
+      "Dependencies": []
+    }
+  }
+}
